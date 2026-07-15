@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Wine Cellar — Suppression des données / Data Deletion</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6; max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem;
+    color: #1c1b1a; background: #fbf7f1;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #ece6e0; background: #241a22; }
+    a { color: #f0a6c0; }
+  }
+  h1 { font-size: 1.9rem; margin-bottom: .25rem; }
+  h2 { margin-top: 2.5rem; border-bottom: 1px solid rgba(128,128,128,.3); padding-bottom: .3rem; }
+  h3 { margin-top: 1.5rem; }
+  .meta { color: #8a827b; font-size: .9rem; }
+  .lang-sep { margin: 4rem 0 0; border: 0; border-top: 2px solid rgba(128,128,128,.35); }
+  a { color: #a10044; }
+  code { background: rgba(128,128,128,.15); padding: .1em .35em; border-radius: 4px; }
+  ol, ul { padding-left: 1.3rem; }
+  table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+  th, td { text-align: left; padding: .5rem .6rem; border: 1px solid rgba(128,128,128,.3); vertical-align: top; }
+  th { background: rgba(128,128,128,.12); }
+</style>
+</head>
+<body>
+
+<!-- ============================ FRANÇAIS ============================ -->
+<section lang="fr">
+  <h1>Suppression des données — My Wine Cellar</h1>
+  <p class="meta">Développeur : Quentin Marciset · Dernière mise à jour : 15 juillet 2026</p>
+
+  <p>
+    Cette page explique comment supprimer les données associées à l'application
+    <strong>My Wine Cellar</strong>. L'application est hors ligne : vos données de vin sont stockées
+    sur votre appareil, et — uniquement si vous l'activez — sauvegardées dans le dossier privé de
+    votre propre Google Drive. Le développeur n'héberge aucun compte ni aucun serveur de vos données.
+  </p>
+
+  <h2>Comment demander la suppression de vos données</h2>
+
+  <h3>1. Supprimer les données locales (sur l'appareil)</h3>
+  <ol>
+    <li>Dans l'app, supprimez une fiche vin depuis son écran de détail (menu › Supprimer), ou</li>
+    <li>ouvrez l'onglet <strong>Profil</strong> et utilisez l'option d'effacement des données, ou</li>
+    <li><strong>désinstallez l'application</strong> : toutes les données locales (base de données et
+      photos) sont alors immédiatement et définitivement supprimées de l'appareil.</li>
+  </ol>
+
+  <h3>2. Supprimer la sauvegarde Google Drive (si vous l'aviez activée)</h3>
+  <p>
+    La sauvegarde est stockée dans le dossier privé <code>appDataFolder</code> de votre propre Google
+    Drive. Se déconnecter dans l'app arrête la synchronisation mais ne supprime pas le fichier déjà
+    envoyé. Pour l'effacer :
+  </p>
+  <ol>
+    <li>Ouvrez <a href="https://drive.google.com">drive.google.com</a> avec le compte utilisé.</li>
+    <li>Allez dans <strong>Paramètres</strong> (roue dentée) › <strong>Gérer les applications</strong>.</li>
+    <li>Trouvez <strong>My Wine Cellar</strong> dans la liste, ouvrez <strong>Options</strong> et
+      choisissez <strong>Supprimer les données de l'application masquées</strong>.</li>
+  </ol>
+
+  <h3>3. Nous contacter</h3>
+  <p>
+    Pour toute demande de suppression, écrivez à
+    <a href="mailto:mywinecellarapp@gmail.com">mywinecellarapp@gmail.com</a>. Nous répondons dans un
+    délai raisonnable.
+  </p>
+
+  <h2>Données supprimées et données conservées</h2>
+  <table>
+    <tr><th>Type de donnée</th><th>Où</th><th>Suppression / conservation</th></tr>
+    <tr>
+      <td>Fiches de vin, photos, notes de dégustation, historique</td>
+      <td>Local (appareil)</td>
+      <td>Supprimées immédiatement à la désinstallation ou via l'effacement dans l'app.</td>
+    </tr>
+    <tr>
+      <td>Fichier de sauvegarde + photos</td>
+      <td>Votre Google Drive (dossier privé de l'app)</td>
+      <td>Supprimés lorsque vous effacez les données de l'app masquées dans votre compte Google
+        (étape 2). Aucun accès du développeur.</td>
+    </tr>
+    <tr>
+      <td>Rapports de plantage anonymisés (Firebase Crashlytics, version Play Store)</td>
+      <td>Firebase / Google</td>
+      <td>Aucune donnée personnelle identifiable. Conservés au maximum <strong>90 jours</strong> puis
+        supprimés automatiquement par Firebase.</td>
+    </tr>
+  </table>
+  <p>
+    Voir aussi notre <a href="./index.html">politique de confidentialité</a>.
+  </p>
+</section>
+
+<hr class="lang-sep">
+
+<!-- ============================ ENGLISH ============================ -->
+<section lang="en">
+  <h1>Data Deletion — My Wine Cellar</h1>
+  <p class="meta">Developer: Quentin Marciset · Last updated: 15 July 2026</p>
+
+  <p>
+    This page explains how to delete the data associated with the <strong>My Wine Cellar</strong>
+    app. The app is offline: your wine data is stored on your device and — only if you enable it —
+    backed up to the private folder of your own Google Drive. The developer hosts no account and no
+    server holding your data.
+  </p>
+
+  <h2>How to request deletion of your data</h2>
+
+  <h3>1. Delete local data (on the device)</h3>
+  <ol>
+    <li>In the app, delete a wine entry from its detail screen (menu › Delete), or</li>
+    <li>open the <strong>Profile</strong> tab and use the clear-data option, or</li>
+    <li><strong>uninstall the app</strong>: all local data (database and photos) is then immediately
+      and permanently removed from the device.</li>
+  </ol>
+
+  <h3>2. Delete the Google Drive backup (if you had enabled it)</h3>
+  <p>
+    The backup is stored in the private <code>appDataFolder</code> of your own Google Drive.
+    Disconnecting inside the app stops syncing but does not delete the already-uploaded file. To
+    erase it:
+  </p>
+  <ol>
+    <li>Open <a href="https://drive.google.com">drive.google.com</a> with the account you used.</li>
+    <li>Go to <strong>Settings</strong> (gear) › <strong>Manage apps</strong>.</li>
+    <li>Find <strong>My Wine Cellar</strong> in the list, open <strong>Options</strong> and choose
+      <strong>Delete hidden app data</strong>.</li>
+  </ol>
+
+  <h3>3. Contact us</h3>
+  <p>
+    For any deletion request, email
+    <a href="mailto:mywinecellarapp@gmail.com">mywinecellarapp@gmail.com</a>. We reply within a
+    reasonable time.
+  </p>
+
+  <h2>Data deleted and data retained</h2>
+  <table>
+    <tr><th>Data type</th><th>Where</th><th>Deletion / retention</th></tr>
+    <tr>
+      <td>Wine entries, photos, tasting notes, history</td>
+      <td>Local (device)</td>
+      <td>Deleted immediately on uninstall or via clear-data in the app.</td>
+    </tr>
+    <tr>
+      <td>Backup file + photos</td>
+      <td>Your Google Drive (app's private folder)</td>
+      <td>Deleted when you erase the hidden app data in your Google account (step 2). No developer
+        access.</td>
+    </tr>
+    <tr>
+      <td>Anonymized crash reports (Firebase Crashlytics, Play Store build)</td>
+      <td>Firebase / Google</td>
+      <td>No personally identifiable data. Retained at most <strong>90 days</strong>, then
+        automatically deleted by Firebase.</td>
+    </tr>
+  </table>
+  <p>
+    See also our <a href="./index.html">privacy policy</a>.
+  </p>
+</section>
+
+</body>
+</html>
